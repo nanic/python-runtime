@@ -1,5 +1,13 @@
 FROM alpine:3.7
 
+MAINTAINER nanichowdary.ravilla@gmail.com
+
+ARG proxy
+ENV https_proxy=$proxy \
+	LANG=en_US.UTF-8 \
+	LC_ALL=en_US.UTF-8
+
+
 RUN echo "ipv6" >> /etc/modules
 
 RUN apk --update add build-base && \
@@ -14,6 +22,7 @@ RUN apk --update add build-base && \
 	python -m ensurepip && \
 	rm -r /usr/lib/python*/ensurepip && \
 	pip install --upgrade pip setuptools && \
+	pip install cryptography && \
 	rm -r /root/.cache
 
 RUN mkdir /app
