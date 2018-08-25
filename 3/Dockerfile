@@ -1,10 +1,8 @@
 FROM alpine:3.7
 
-MAINTAINER nanichowdary.ravilla@gmail.com
+MAINTAINER Naren <nanichowdary.ravilla@gmail.com>
 
-ARG proxy
-ENV https_proxy=$proxy \
-	LANG=en_US.UTF-8 \
+ENV LANG=en_US.UTF-8 \
 	LC_ALL=en_US.UTF-8
 
 RUN echo "ipv6" >> /etc/modules
