@@ -8,8 +8,8 @@ A Docker file to create an image with python runtime
 
 ### How to run the image ?
 
-docker pull nanic/python-runtime:version
-docker run -d nanic/python-runtime
+* docker pull nanic/python-runtime:version
+* docker run -d nanic/python-runtime
 
 ### Refer to the following project to see the usage
     - https://github.com/nanic/python-rest-api-docker
